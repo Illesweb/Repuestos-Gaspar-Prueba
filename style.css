@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+:root {
+  --rojo: #c62828;
+  --rojo-oscuro: #b71c1c;
+  --gris-claro: #f4f4f4;
+  --gris-fondo: #eaeaea;
+  --oscuro: #222;
+  --verde: #25d366;
+}
+
+
+body {
+  background: linear-gradient(180deg, var(--gris-claro) 0%, var(--gris-fondo) 100%);
+  color: var(--oscuro);
+  line-height: 1.6;
+}
+
+
+header {
+  background: linear-gradient(135deg, var(--rojo), var(--rojo-oscuro));
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 25px 20px;
+}
+
+
+section {
+  margin-bottom: 50px;
+  padding-top: 20px;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  border-bottom: 3px solid var(--rojo);
+  display: inline-block;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+section::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--rojo);
+  margin-top: 10px;
+}
+
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.producto {
+  background-color: white;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.producto h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.producto p {
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  color: #555;
+}
+
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: var(--verde);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+}
+
+
+.contacto p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+
+footer {
+  background-color: var(--oscuro);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+}
